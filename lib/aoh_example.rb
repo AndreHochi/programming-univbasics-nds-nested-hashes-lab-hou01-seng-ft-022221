@@ -11,18 +11,25 @@ def assembled_aoh
   # Array. Ruby constants are denoted by ALL_CAPS
   
   array = [DON_G, JOELLE_VD, PAT_M, KATE_G, BRUCE_G]
-  
+  array
 end
 
 def literal_aoh
-  array = [DON_G, JOELLE_VD, PAT_M, KATE_G, BRUCE_G]
-
+  array = []
+  array[0] = DON_G
+  array[1] = JOELLE_VD
+  array[2] = PAT_M
+  array[3] = KATE_G
+  array[4] = BRUCE_G
+  array
 end
 
 def aoh_lookup(aoh, row, key)
+  aoh[row][key]
 end
 
 def aoh_update(aoh, row, key, new_value)
   # Update the AoH data at row and key to have the value of new_value
   # Return the updated AoH
+    aoh[row][key] = new_value
 end
